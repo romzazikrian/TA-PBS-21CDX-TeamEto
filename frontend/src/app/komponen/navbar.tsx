@@ -1,8 +1,8 @@
-// komponen/Navbar.tsx
+import React from 'react';
 import Link from 'next/link';
 import styles from '../styles/Navbar.module.css';
 
-const Navbar = () => {
+const KomponenNavbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
@@ -16,6 +16,6 @@ const Navbar = () => {
       </ul>
     </nav>
   );
-}
+};
 
-export default Navbar;
+export default KomponenNavbar;
