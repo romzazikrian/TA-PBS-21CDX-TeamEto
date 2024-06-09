@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../app/komponen/navbar';
-import styles from '../styles/Tentang.module.css';
+import styles from '../app/styles/Tentang.module.css';
 
 const Tentang = () => {
   return (
