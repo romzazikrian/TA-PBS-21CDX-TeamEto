@@ -1,0 +1,26 @@
+/* styles/BagianHero.module.css */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: url('/images/samudra.jpg') no-repeat center center/cover;
+    color: white;
+  }
+  
+  .kontenHero {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .kontenHero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .kontenHero p {
+    font-size: 1.5rem;
+  }
+  
