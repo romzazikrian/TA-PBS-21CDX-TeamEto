@@ -2,6 +2,7 @@
 .container {
     padding: 2rem;
     text-align: center;
+    background: url('/images/samudra.jpeg') no-repeat center center/cover;
   }
   
   .makhlukLaut {

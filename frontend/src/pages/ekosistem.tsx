@@ -34,6 +34,14 @@ export default function Ekosistem() {
             </div>
           ))}
         </div>
+        {/* Bagian saran */}
+        <div className={styles.saranSection}>
+          <h2>Kirim Saran Anda</h2>
+          <form className={styles.saranForm}>
+            <input type="text" placeholder="Masukkan saran Anda" />
+            <button type="submit">Kirim</button>
+          </form>
+        </div>
       </main>
     </div>
   );
