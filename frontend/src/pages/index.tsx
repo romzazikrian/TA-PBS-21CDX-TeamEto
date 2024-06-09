@@ -1,14 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Navbar from '../app/komponen/navbar';
+import BagianHero from '../app/komponen/BagianHero';
+import styles from 'src/app/styles/Beranda.module.css';
 
 export default function index() {
-  return (
-    <div>index</div>
-    // pages/index.tsx
-import Navbar from '../komponen/Navbar';
-import BagianHero from '../komponen/BagianHero';
-import styles from '../styles/Beranda.module.css';
-
-export default function Beranda() {
   return (
     <div>
       <Navbar />
@@ -19,7 +14,4 @@ export default function Beranda() {
       </main>
     </div>
   );
-}
-
-  )
 }
