@@ -10,9 +10,9 @@ const KomponenNavbar = () => {
       </div>
       <ul className={styles.navLink}>
         <li><Link href="/">Beranda</Link></li>
-        <li><Link href="/tentang">Tentang</Link></li>
-        <li><Link href="/makhluk-laut">Makhluk Laut</Link></li>
-        <li><Link href="/ekosistem">Ekosistem</Link></li>
+        <li><Link href="pages/tentang">Tentang</Link></li>
+        <li><Link href="pages/makhluk-laut">Makhluk Laut</Link></li>
+        <li><Link href="pages/ekosistem">Ekosistem</Link></li>
       </ul>
     </nav>
   );

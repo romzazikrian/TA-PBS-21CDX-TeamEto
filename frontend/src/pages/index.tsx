@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from '../app/komponen/navbar';
 import BagianHero from '../app/komponen/BagianHero';
-import styles from 'src/app/styles/Beranda.module.css';
+import styles from '../app/styles/Beranda.module.css';
 
-export default function index() {
+export default function Beranda() {
   return (
     <div>
       <Navbar />
