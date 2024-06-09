@@ -1,0 +1,15 @@
+/* styles/Beranda.module.css */
+.main {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .main p {
+    font-size: 1.2rem;
+  }
+  
