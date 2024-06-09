@@ -1,0 +1,37 @@
+/* styles/MakhlukLaut.module.css */
+.container {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .makhlukLaut {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .foto {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .deskripsi h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .deskripsi p {
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+  
