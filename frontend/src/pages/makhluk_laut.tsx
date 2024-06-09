@@ -1,8 +1,8 @@
-// pages/makhluk-laut.tsx
+import React from 'react';
 import Navbar from '../app/komponen/navbar';
-import styles from '../styles/MakhlukLaut.module.css';
+import styles from '../app/styles/MakhlukLaut.module.css';
 
-const MakhlukLaut = () => {
+export default function MakhlukLaut() {
   // Array objek dengan informasi makhluk laut
   const makhlukLaut = [
     {
@@ -38,5 +38,3 @@ const MakhlukLaut = () => {
     </div>
   );
 }
-
-export default MakhlukLaut;

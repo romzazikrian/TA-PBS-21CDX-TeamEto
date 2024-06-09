@@ -1,0 +1,30 @@
+/* styles/Tentang.module.css */
+.container {
+    font-family: 'Roboto', sans-serif; /* Pilih font yang mudah dibaca */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Warna teks utama */
+    background-color: #f9f9f9; /* Warna latar belakang */
+    padding: 20px; /* Ruang di sekitar konten */
+  }
+  
+  .section {
+    margin-bottom: 20px; /* Ruang antara setiap bagian */
+    padding: 20px; /* Ruang di sekitar konten */
+    background-color: #fff; /* Warna latar belakang */
+    border-radius: 5px; /* Sudut bulat untuk elemen */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  }
+  
+  .section h2 {
+    color: #333; /* Warna judul */
+    font-size: 24px; /* Ukuran judul */
+    margin-bottom: 10px; /* Ruang di bawah judul */
+  }
+  
+  .section p {
+    color: #666; /* Warna teks paragraf */
+    font-size: 16px; /* Ukuran teks paragraf */
+    line-height: 1.6; /* Jarak antara baris */
+  }
+  
