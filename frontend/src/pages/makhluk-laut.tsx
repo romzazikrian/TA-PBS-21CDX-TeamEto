@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../app/komponen/navbar';
+import Footer from '../app/komponen/footer';
 import styles from '../app/styles/MakhlukLaut.module.css';
 
 export default function MakhlukLaut() {

@@ -3,6 +3,7 @@ import Navbar from '../app/komponen/navbar';
 import BagianHero from '../app/komponen/BagianHero';
 import styles from '../app/styles/Beranda.module.css';
 
+
 export default function Beranda() {
   return (
     <div>
