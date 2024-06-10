@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Mahasiswa;
+use App\Http\Controllers\Saran;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,19 +20,19 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // route untuk tampil data
-Route::get("/view",[Mahasiswa::class,'viewData']);
+Route::get("/view",[Saran::class,'viewData']);
 
 // route untuk pencarian
-Route::get('/search/{keyword}',[Mahasiswa::class,'searchData']);
+Route::get('/search/{keyword}',[Saran::class,'searchData']);
 
 // route untuk tambah data
-Route::post("/save",[Mahasiswa::class,'saveData']);
+Route::post("/save",[Saran::class,'saveData']);
 
 // route untuk delete data
-Route::delete("/delete/{npm}",[Mahasiswa::class,'deleteData']);
+Route::delete("/delete/{id}",[Saran::class,'deleteData']);
 
 // route untuk detail data
-Route::get('/detail/{npm}',[Mahasiswa::class,'detailData']);
+Route::get('/detail/{id}',[Saran::class,'detailData']);
 
 // route untuk edit data
-Route::put("/edit/{npm}",[Mahasiswa::class,'editData']);
+Route::put("/edit/{id}",[Saran::class,'editData']);
