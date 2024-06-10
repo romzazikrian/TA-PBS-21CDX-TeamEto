@@ -36,3 +36,16 @@
   text-decoration: underline;
   color: #f2f2f2; /* Warna yang sedikit lebih terang ketika dihover */
 }
+
+/* Navbar.module.css */
+
+.logout {
+  cursor: pointer;
+  color: #ff0000;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.logout:hover {
+  color: #000000;
+}
