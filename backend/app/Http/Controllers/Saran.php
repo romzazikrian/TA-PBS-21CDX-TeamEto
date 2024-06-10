@@ -51,20 +51,20 @@ class Saran extends Controller
     function saveData(Request $req)
     {
         // ambil data judul
-        $judul = $req->judul;
+        $saran = $req->saran;
 
         // jika judul sudah ada
-        if (count($this->model->checkSaveData($judul)) != 0) {
+        if (count($this->model->checkSaveData($saran)) != 0) {
             $error = 1;
             $message = "Data Gagal Disimpan (Judul Sudah Terpakai !)";
         }
         // jika judul belum ada
         else {
             // ambil request
-            $isi = $req->isi;
+            $saran = $req->saran;
 
             // proses simpan data
-            $this->model->saveData($judul, $isi);
+            $this->model->saveData($saran);
 
             $error = 0;
             $message = "Data Berhasil Disimpan";
@@ -104,28 +104,28 @@ class Saran extends Controller
     }
 
     // buat fungsi untuk edit data
-    function editData($id_lama, Request $req)
-    {
-        // ambil data judul
-        $judul = $req->judul;
+    // function editData($id_lama, Request $req)
+    // {
+    //     // ambil data judul
+    //     $judul = $req->saran;
 
-        // cek apakah data saran (judul) tersedia/tidak pada model checkEditData
-        // jika data tersedia
-        if (count($this->model->checkEditData($id_lama, $judul)) == 0) {
-            $isi = $req->isi;
+    //     // cek apakah data saran (judul) tersedia/tidak pada model checkEditData
+    //     // jika data tersedia
+    //     if (count($this->model->checkEditData($id_lama, $judul)) == 0) {
+    //         $isi = $req->isi;
 
-            // panggil model "editData"
-            $this->model->editData($judul, $isi, $id_lama);
+    //         // panggil model "editData"
+    //         $this->model->editData($judul, $isi, $id_lama);
 
-            $error = 0;
-            $message = "Data Berhasil Diubah";
-        }
-        // jika data tidak tersedia
-        else {
-            $error = 1;
-            $message = "Data Gagal Diubah (Judul Sudah Terpakai !)";
-        }
+    //         $error = 0;
+    //         $message = "Data Berhasil Diubah";
+    //     }
+    //     // jika data tidak tersedia
+    //     else {
+    //         $error = 1;
+    //         $message = "Data Gagal Diubah (Judul Sudah Terpakai !)";
+    //     }
 
-        return response(["error" => $error, "message" => $message], http_response_code());
-    }
+    //     return response(["error" => $error, "message" => $message], http_response_code());
+    // }
 }
