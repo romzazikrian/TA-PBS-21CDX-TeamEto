@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../app/komponen/navbar"; // Pastikan lokasi file Navbar yang benar
-import styles from "../app/styles/Admin.module.css"; // Pastikan lokasi dan nama file CSS Module yang benar
+import Navbar from "../app/komponen/navbar";
+import styles from "../app/styles/Admin.module.css";
 
 const AdminDashboard = () => {
   // Dummy data untuk simulasi kiriman saran
@@ -24,7 +24,25 @@ const AdminDashboard = () => {
     <div>
       <Navbar isAdmin={true} />
       <div className={styles.container}>
-        <h1 className={styles.title}>Admin Dashboard</h1>
+        <div className={styles.header}>
+          <h1 className={styles.title}>Admin Dashboard</h1>
+          <div className={styles.notifications}>
+            {/* Placeholder for notifications menu */}
+            <span className={styles.notificationIcon}>
+              <i className="fa fa-bell"></i>
+            </span>
+            <div className={styles.notificationDropdown}>
+              {/* Placeholder for notification items */}
+              <div className={styles.notificationItem}>
+                <p>New notification 1</p>
+              </div>
+              <div className={styles.notificationItem}>
+                <p>New notification 2</p>
+              </div>
+              {/* Add more notification items as needed */}
+            </div>
+          </div>
+        </div>
         <div className={styles.content}>
           {feedbacks.map((feedback) => (
             <div key={feedback.id} className={styles.card}>
