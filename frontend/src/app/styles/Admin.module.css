@@ -14,6 +14,73 @@
 .title {
   font-size: 24px;
   font-weight: bold;
+  color: #333; /* Warna teks judul */
+}
+
+.notifications {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.notificationIcon {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #333; /* Warna ikon notifikasi */
+}
+
+.notificationIcon:hover {
+  color: #007bff; /* Warna ikon notifikasi saat dihover */
+}
+
+.notificationDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #a43333;
+  border-radius: 4px;
+  min-width: 200px;
+  z-index: 10;
+  display: none; /* Default hidden */
+}
+
+.notifications:hover .notificationDropdown {
+  display: block; /* Show on hover */
+}
+
+.notificationItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.notificationItem:hover {
+  background-color: #1c2eb6; /* Warna latar belakang item notifikasi saat dihover */
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333; /* Warna teks judul bagian */
+}
+
+.card {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .menu {
@@ -26,6 +93,7 @@
 .menuTitle {
   font-size: 20px;
   margin-bottom: 10px;
+  color: #333; /* Warna teks judul menu */
 }
 
 .menuList {
@@ -41,31 +109,18 @@
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: #333;
+  color: #333; /* Warna teks item menu */
 }
 
 .menuItem a:hover {
-  background-color: #ddd;
+  background-color: #ddd; /* Warna latar belakang item menu saat dihover */
 }
 
-.content {
-  margin-top: 20px;
-}
-
-.sectionTitle {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.card {
-  background-color: #fff;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
+.badge {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 5px;
 }
