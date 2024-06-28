@@ -1,7 +1,10 @@
+/* Admin.module.css */
+
 .container {
-  width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #f0f0f0;
 }
 
 .header {
@@ -12,88 +15,93 @@
 }
 
 .title {
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: bold;
-  color: #333; /* Warna teks judul */
+  color: #333;
 }
 
-.notifications {
+.notifications,
+.settings {
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
-.notificationIcon {
-  font-size: 20px;
-  margin-right: 10px;
+.notificationIcon,
+.settingIcon {
   cursor: pointer;
-  color: #333; /* Warna ikon notifikasi */
+  font-size: 1.5rem;
+  color: #333;
+  margin-left: 20px;
 }
 
-.notificationIcon:hover {
-  color: #007bff; /* Warna ikon notifikasi saat dihover */
+.notificationIcon:hover,
+.settingIcon:hover {
+  color: #007bff;
 }
 
-.notificationDropdown {
+.badge {
   position: absolute;
-  top: 100%;
+  top: -5px;
+  right: -450px;
+  background-color: #b30a0a;
+  color: rgb(21, 32, 104);
+  padding: 3px 6px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.notificationDropdown,
+.settingDropdown {
+  position: absolute;
+  top: 30px;
   right: 0;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #a43333;
-  border-radius: 4px;
-  min-width: 200px;
-  z-index: 10;
-  display: none; /* Default hidden */
-}
-
-.notifications:hover .notificationDropdown {
-  display: block; /* Show on hover */
-}
-
-.notificationItem {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.notificationItem:hover {
-  background-color: #1c2eb6; /* Warna latar belakang item notifikasi saat dihover */
-}
-
-.content {
-  margin-top: 20px;
-}
-
-.sectionTitle {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #333; /* Warna teks judul bagian */
-}
-
-.card {
+  width: 250px;
   background-color: #fff;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: none;
 }
 
-.card h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
+.notificationDropdown.active,
+.settingDropdown.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.notificationItem,
+.settingItem {
+  padding: 10px;
+  border-bottom: 1px solid #432778;
+}
+
+.notificationItem:last-child,
+.settingItem:last-child {
+  border-bottom: none;
+}
+
+.notificationItem p,
+.settingItem a {
+  color: #333;
+  text-decoration: none;
+}
+
+.notificationItem p:hover,
+.settingItem a:hover {
+  color: #007bff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .menu {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.menuTitle {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #333; /* Warna teks judul menu */
+  margin-bottom: 20px;
 }
 
 .menuList {
@@ -106,21 +114,39 @@
 }
 
 .menuItem a {
-  display: block;
-  padding: 10px;
+  color: #333;
   text-decoration: none;
-  color: #333; /* Warna teks item menu */
+  display: flex;
+  align-items: center;
 }
 
 .menuItem a:hover {
-  background-color: #ddd; /* Warna latar belakang item menu saat dihover */
+  color: #007bff;
 }
 
-.badge {
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  padding: 2px 6px;
-  border-radius: 50%;
-  margin-left: 5px;
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  color: #666;
+}
+
+.fa {
+  margin-right: 10px;
 }
