@@ -1,21 +1,21 @@
-// pages/admin.js
-
-import React from 'react';
-import Navbar from '../app/komponen/navbar';
-import styles from '../app/styles/Admin.module.css';
+import React from "react";
+import Navbar from "../app/komponen/navbar"; // Pastikan lokasi file Navbar yang benar
+import styles from "../app/styles/Admin.module.css"; // Pastikan lokasi dan nama file CSS Module yang benar
 
 const AdminDashboard = () => {
   // Dummy data untuk simulasi kiriman saran
   const feedbacks = [
     {
       id: 1,
-      user: 'Rizal',
-      message: 'Saya menyarankan untuk menambahkan fitur pencarian di halaman beranda.',
+      user: "Rizal",
+      message:
+        "Saya menyarankan untuk menambahkan fitur pencarian di halaman beranda.",
     },
     {
       id: 2,
-      user: 'Budi',
-      message: 'Apakah mungkin menambahkan opsi untuk menyimpan artikel ke dalam daftar favorit?',
+      user: "Budi",
+      message:
+        "Apakah mungkin menambahkan opsi untuk menyimpan artikel ke dalam daftar favorit?",
     },
     // Tambahkan kiriman saran lainnya sesuai kebutuhan
   ];
@@ -36,6 +36,6 @@ const AdminDashboard = () => {
       </div>
     </div>
   );
-}
+};
 
 export default AdminDashboard;
