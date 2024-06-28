@@ -20,33 +20,47 @@ const AdminDashboard = () => {
     // Tambahkan kiriman saran lainnya sesuai kebutuhan
   ];
 
+  // Dummy data untuk simulasi menu data
+  const menuData = [
+    {
+      id: 1,
+      title: "Users",
+      icon: "fa fa-users",
+      link: "/admin/users",
+    },
+    {
+      id: 2,
+      title: "Products",
+      icon: "fa fa-cubes",
+      link: "/admin/products",
+    },
+    // Tambahkan menu data lainnya sesuai kebutuhan
+  ];
+
   return (
     <div>
       <Navbar isAdmin={true} />
       <div className={styles.container}>
         <div className={styles.header}>
           <h1 className={styles.title}>Admin Dashboard</h1>
-          <div className={styles.notifications}>
-            {/* Placeholder for notifications menu */}
-            <span className={styles.notificationIcon}>
-              <i className="fa fa-bell"></i>
-            </span>
-            <div className={styles.notificationDropdown}>
-              {/* Placeholder for notification items */}
-              <div className={styles.notificationItem}>
-                <p>New notification 1</p>
-              </div>
-              <div className={styles.notificationItem}>
-                <p>New notification 2</p>
-              </div>
-              {/* Add more notification items as needed */}
-            </div>
-          </div>
+        </div>
+        <div className={styles.menu}>
+          <h2 className={styles.menuTitle}>Menu Data</h2>
+          <ul className={styles.menuList}>
+            {menuData.map((item) => (
+              <li key={item.id} className={styles.menuItem}>
+                <a href={item.link}>
+                  <i className={item.icon}></i> {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className={styles.content}>
+          <h2 className={styles.sectionTitle}>Feedbacks</h2>
           {feedbacks.map((feedback) => (
             <div key={feedback.id} className={styles.card}>
-              <h2>{feedback.user}</h2>
+              <h3>{feedback.user}</h3>
               <p>{feedback.message}</p>
             </div>
           ))}

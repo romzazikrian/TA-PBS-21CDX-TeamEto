@@ -1,29 +1,71 @@
-/* app/styles/Admin.module.css */
-
 .container {
-  max-width: 1200px;
+  width: 80%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menuTitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.menuList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menuItem {
+  margin-bottom: 10px;
+}
+
+.menuItem a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.menuItem a:hover {
+  background-color: #ddd;
 }
 
 .content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  margin-top: 20px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .card {
-  background-color: #f4f4f4;
-  border-radius: 5px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.card h2 {
-  margin-bottom: 1rem;
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
 }
