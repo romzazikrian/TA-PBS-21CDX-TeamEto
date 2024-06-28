@@ -1,10 +1,9 @@
-/* Admin.module.css */
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   background-color: #f0f0f0;
+  font-family: "Roboto", sans-serif; /* Set font for the entire container */
 }
 
 .header {
@@ -16,25 +15,22 @@
 
 .title {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700; /* Set font weight to bold */
   color: #333;
 }
 
-.notifications,
-.settings {
+.notifications {
   position: relative;
 }
 
-.notificationIcon,
-.settingIcon {
+.notificationIcon {
   cursor: pointer;
   font-size: 1.5rem;
   color: #333;
   margin-left: 20px;
 }
 
-.notificationIcon:hover,
-.settingIcon:hover {
+.notificationIcon:hover {
   color: #007bff;
 }
 
@@ -42,111 +38,157 @@
   position: absolute;
   top: -5px;
   right: -450px;
-  background-color: #b30a0a;
-  color: rgb(21, 32, 104);
+  background-color: #007bff;
+  color: white;
   padding: 3px 6px;
   border-radius: 50%;
   font-size: 0.8rem;
+  font-weight: 700; /* Set font weight to bold */
 }
 
-.notificationDropdown,
-.settingDropdown {
+.notificationDropdown {
   position: absolute;
-  top: 30px;
+  top: 40px;
   right: 0;
-  width: 250px;
+  width: 300px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 100;
   display: none;
-}
-
-.notificationDropdown.active,
-.settingDropdown.active {
-  display: block;
   animation: fadeIn 0.3s ease-in-out;
 }
 
-.notificationItem,
-.settingItem {
-  padding: 10px;
-  border-bottom: 1px solid #432778;
+.notificationDropdown.active {
+  display: block;
 }
 
-.notificationItem:last-child,
+.notificationItem {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.notificationItem:last-child {
+  border-bottom: none;
+}
+
+.notificationItem p {
+  color: #333;
+  margin: 0;
+  font-weight: 400; /* Set font weight to normal */
+}
+
+.notificationItem p:hover {
+  color: #007bff;
+}
+
+.settingIcon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #333;
+  margin-left: 20px;
+}
+
+.settingIcon:hover {
+  color: #007bff;
+}
+
+.settingDropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.settingDropdown.active {
+  display: block;
+}
+
+.settingList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.settingItem {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
 .settingItem:last-child {
   border-bottom: none;
 }
 
-.notificationItem p,
 .settingItem a {
   color: #333;
   text-decoration: none;
+  font-weight: 400; /* Set font weight to normal */
 }
 
-.notificationItem p:hover,
 .settingItem a:hover {
   color: #007bff;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.menu {
+  margin-top: 20px;
 }
 
-.menu {
-  margin-bottom: 20px;
+.menuTitle {
+  font-size: 1.5rem;
+  font-weight: 700; /* Set font weight to bold */
+  color: #333;
 }
 
 .menuList {
-  list-style-type: none;
-  padding: 0;
+  display: flex;
+  flex-direction: column; /* Menyusun menu secara vertikal dari atas ke bawah */
 }
 
 .menuItem {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
   margin-bottom: 10px;
 }
 
 .menuItem a {
-  color: #333;
-  text-decoration: none;
   display: flex;
   align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-weight: 400; /* Set font weight to normal */
+}
+
+.menuItem a i {
+  margin-right: 10px;
 }
 
 .menuItem a:hover {
   color: #007bff;
 }
 
+.content {
+  margin-top: 20px;
+}
+
 .sectionTitle {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700; /* Set font weight to bold */
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .card {
   background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
 }
 
 .card h3 {
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.card p {
-  color: #666;
-}
-
-.fa {
-  margin-right: 10px;
+  font-size: 1.2rem;
 }

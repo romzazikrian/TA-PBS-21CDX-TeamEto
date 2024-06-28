@@ -23,24 +23,47 @@ const AdminDashboard = () => {
   // Dummy data untuk simulasi menu data
   const [menuData] = useState([
     {
+      id: 0,
+      title: "Dashboard",
+      icon: "fa fa-dashboard",
+      link: "/admin/dashboard",
+    },
+    {
       id: 1,
       title: "Users",
       icon: "fa fa-users",
       link: "/admin/users",
     },
     {
-      id: 2,
-      title: "Products",
-      icon: "fa fa-cubes",
-      link: "/admin/products",
+      id: 4,
+      title: "Reports",
+      icon: "fa fa-chart-bar",
+      link: "/admin/reports",
     },
     {
-      id: 3,
-      title: "Settings", // Tambahkan menu Settings
+      id: 5,
+      title: "Categories",
+      icon: "fa fa-tags",
+      link: "/admin/categories",
+    },
+    {
+      id: 6,
+      title: "Analytics",
+      icon: "fa fa-analytics",
+      link: "/admin/analytics",
+    },
+    {
+      id: 7,
+      title: "Support",
+      icon: "fa fa-life-ring",
+      link: "/admin/support",
+    },
+    {
+      id: 8,
+      title: "Settings",
       icon: "fa fa-cog",
       link: "/admin/settings",
     },
-    // Tambahkan menu data lainnya sesuai kebutuhan
   ]);
 
   // State untuk menampilkan atau menyembunyikan dropdown notifikasi
@@ -114,16 +137,16 @@ const AdminDashboard = () => {
           </div>
         </div>
         <div className={styles.menu}>
-          <h2 className={styles.menuTitle}></h2>
-          <ul className={styles.menuList}>
+          <h2 className={styles.menuTitle}>Menu</h2>
+          <div className={styles.menuList}>
             {menuData.map((item) => (
-              <li key={item.id} className={styles.menuItem}>
+              <div key={item.id} className={styles.menuItem}>
                 <a href={item.link}>
                   <i className={item.icon}></i> {item.title}
                 </a>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
         <div className={styles.content}>
           <h2 className={styles.sectionTitle}>Feedbacks</h2>
